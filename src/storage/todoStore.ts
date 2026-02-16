@@ -6,6 +6,7 @@ import { createTodo, updateTodo } from '../models/todo';
  */
 export interface TodoFilter {
   priority?: Priority;
+  tag?: string;
 }
 
 /**
@@ -22,6 +23,10 @@ export class TodoStore {
     
     if (filter?.priority) {
       todos = todos.filter(todo => todo.priority === filter.priority);
+    }
+    
+    if (filter?.tag) {
+      todos = todos.filter(todo => todo.tags.includes(filter.tag!));
     }
     
     return todos;

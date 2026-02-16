@@ -5,7 +5,7 @@ import { ApiResponse, Todo, CreateTodoInput, UpdateTodoInput, Priority } from '.
 import { isValidPriority } from '../models/todo';
 
 /**
- * GET /todos - Get all todos, optionally filtered by priority
+ * GET /todos - Get all todos, optionally filtered by priority or tag
  */
 export function getAllTodos(req: Request, res: Response): void {
   const filter: TodoFilter = {};
@@ -17,6 +17,16 @@ export function getAllTodos(req: Request, res: Response): void {
       filter.priority = priorityParam as Priority;
     } else {
       throw new BadRequestError(`Invalid priority filter: '${priorityParam}'. Must be 'high', 'medium', or 'low'`);
+    }
+  }
+  
+  // Handle tag query parameter
+  if (req.query.tag !== undefined) {
+    const tagParam = req.query.tag;
+    if (typeof tagParam === 'string' && tagParam.length > 0) {
+      filter.tag = tagParam;
+    } else {
+      throw new BadRequestError(`Invalid tag filter: tag must be a non-empty string`);
     }
   }
   
@@ -53,7 +63,8 @@ export function createTodo(req: Request, res: Response): void {
   const input: CreateTodoInput = {
     title: req.body.title,
     description: req.body.description,
-    priority: req.body.priority
+    priority: req.body.priority,
+    tags: req.body.tags
   };
   
   const todo = todoStore.create(input);
@@ -75,6 +86,7 @@ export function updateTodo(req: Request, res: Response): void {
   if (req.body.description !== undefined) input.description = req.body.description;
   if (req.body.completed !== undefined) input.completed = req.body.completed;
   if (req.body.priority !== undefined) input.priority = req.body.priority;
+  if (req.body.tags !== undefined) input.tags = req.body.tags;
   
   const todo = todoStore.update(id, input);
   

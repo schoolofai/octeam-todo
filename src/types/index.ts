@@ -18,6 +18,11 @@ export const VALID_PRIORITIES: Priority[] = ['high', 'medium', 'low'];
 export const DEFAULT_PRIORITY: Priority = 'medium';
 
 /**
+ * Default tags for new todos
+ */
+export const DEFAULT_TAGS: string[] = [];
+
+/**
  * Todo item interface
  */
 export interface Todo {
@@ -26,6 +31,7 @@ export interface Todo {
   description: string;
   completed: boolean;
   priority: Priority;
+  tags: string[];
   createdAt: Date;
   updatedAt: Date;
 }
@@ -37,6 +43,7 @@ export interface CreateTodoInput {
   title: string;
   description?: string;
   priority?: Priority;
+  tags?: string[];
 }
 
 /**
@@ -47,6 +54,7 @@ export interface UpdateTodoInput {
   description?: string;
   completed?: boolean;
   priority?: Priority;
+  tags?: string[];
 }
 
 /**

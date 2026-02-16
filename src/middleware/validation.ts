@@ -1,6 +1,6 @@
 import { Request, Response, NextFunction } from 'express';
 import { BadRequestError } from './errorHandler';
-import { validateCreateInput, validateUpdateInput, isValidPriority } from '../models/todo';
+import { validateCreateInput, validateUpdateInput, isValidPriority, isValidTags } from '../models/todo';
 
 /**
  * Validates request body for creating a todo
@@ -13,6 +13,11 @@ export function validateCreateTodo(
   // Check priority first for specific error message
   if (req.body.priority !== undefined && !isValidPriority(req.body.priority)) {
     throw new BadRequestError(`Invalid priority: '${req.body.priority}'. Must be 'high', 'medium', or 'low'`);
+  }
+  
+  // Check tags for specific error message
+  if (req.body.tags !== undefined && !isValidTags(req.body.tags)) {
+    throw new BadRequestError('Invalid tags: must be an array of strings');
   }
   
   if (!validateCreateInput(req.body)) {
@@ -34,8 +39,13 @@ export function validateUpdateTodo(
     throw new BadRequestError(`Invalid priority: '${req.body.priority}'. Must be 'high', 'medium', or 'low'`);
   }
   
+  // Check tags for specific error message
+  if (req.body.tags !== undefined && !isValidTags(req.body.tags)) {
+    throw new BadRequestError('Invalid tags: must be an array of strings');
+  }
+  
   if (!validateUpdateInput(req.body)) {
-    throw new BadRequestError('Invalid input: title must be string, description must be string, completed must be boolean, priority must be high/medium/low');
+    throw new BadRequestError('Invalid input: title must be string, description must be string, completed must be boolean, priority must be high/medium/low, tags must be array of strings');
   }
   next();
 }

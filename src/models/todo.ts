@@ -1,4 +1,4 @@
-import { Todo, CreateTodoInput, UpdateTodoInput, Priority, VALID_PRIORITIES, DEFAULT_PRIORITY } from '../types';
+import { Todo, CreateTodoInput, UpdateTodoInput, Priority, VALID_PRIORITIES, DEFAULT_PRIORITY, DEFAULT_TAGS } from '../types';
 import { v4 as uuidv4 } from 'uuid';
 
 /**
@@ -6,6 +6,16 @@ import { v4 as uuidv4 } from 'uuid';
  */
 export function isValidPriority(value: unknown): value is Priority {
   return typeof value === 'string' && VALID_PRIORITIES.includes(value as Priority);
+}
+
+/**
+ * Check if a value is a valid tags array
+ */
+export function isValidTags(value: unknown): value is string[] {
+  if (!Array.isArray(value)) {
+    return false;
+  }
+  return value.every(item => typeof item === 'string');
 }
 
 /**
@@ -19,6 +29,7 @@ export function createTodo(input: CreateTodoInput): Todo {
     description: input.description || '',
     completed: false,
     priority: input.priority || DEFAULT_PRIORITY,
+    tags: input.tags || [...DEFAULT_TAGS],
     createdAt: now,
     updatedAt: now
   };
@@ -34,6 +45,7 @@ export function updateTodo(todo: Todo, input: UpdateTodoInput): Todo {
     description: input.description !== undefined ? input.description : todo.description,
     completed: input.completed !== undefined ? input.completed : todo.completed,
     priority: input.priority !== undefined ? input.priority : todo.priority,
+    tags: input.tags !== undefined ? input.tags : todo.tags,
     updatedAt: new Date()
   };
 }
@@ -57,6 +69,11 @@ export function validateCreateInput(input: unknown): input is CreateTodoInput {
     return false;
   }
   
+  // Tags is optional, but if provided must be valid array of strings
+  if (obj.tags !== undefined && !isValidTags(obj.tags)) {
+    return false;
+  }
+  
   return true;
 }
 
@@ -73,8 +90,9 @@ export function validateUpdateInput(input: unknown): input is UpdateTodoInput {
   const hasValidDescription = obj.description === undefined || typeof obj.description === 'string';
   const hasValidCompleted = obj.completed === undefined || typeof obj.completed === 'boolean';
   const hasValidPriority = obj.priority === undefined || isValidPriority(obj.priority);
+  const hasValidTags = obj.tags === undefined || isValidTags(obj.tags);
   
-  return hasValidTitle && hasValidDescription && hasValidCompleted && hasValidPriority;
+  return hasValidTitle && hasValidDescription && hasValidCompleted && hasValidPriority && hasValidTags;
 }
 
 /**
