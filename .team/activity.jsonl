@@ -22,3 +22,6 @@
 {"id":"evt-1771247960632-wpy0","timestamp":"2026-02-16T13:19:20.632Z","event_type":"task_updated","agent_id":"developer-1","details":{"task_id":"TODO-001","old_status":"claimed","new_status":"review"}}
 {"id":"evt-1771247971797-1biq","timestamp":"2026-02-16T13:19:31.797Z","event_type":"task_claimed","agent_id":"developer-1","details":{"task_id":"TODO-002","title":"Implement Todo data model and storage"}}
 {"id":"evt-1771248016883-apig","timestamp":"2026-02-16T13:20:16.883Z","event_type":"task_updated","agent_id":"developer-1","details":{"task_id":"TODO-002","old_status":"claimed","new_status":"review"}}
+{"id":"evt-1771248022170-xoxw","timestamp":"2026-02-16T13:20:22.170Z","event_type":"task_updated","agent_id":"lead-1","details":{"task_id":"TODO-001","old_status":"review","new_status":"done"}}
+{"id":"evt-1771248022195-vbcj","timestamp":"2026-02-16T13:20:22.195Z","event_type":"task_updated","agent_id":"lead-1","details":{"task_id":"TODO-007","old_status":"backlog","new_status":"ready"}}
+{"id":"evt-1771248022221-vtvh","timestamp":"2026-02-16T13:20:22.221Z","event_type":"message_sent","agent_id":"lead-1","details":{"from":"lead-1","to":"developer-1","body_preview":"TODO-001 approved and marked done. Great work on the project setup! Continue wit"}}

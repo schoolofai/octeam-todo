@@ -3,12 +3,20 @@
   "type": "task",
   "title": "QA: Verify project setup and dependencies",
   "description": "FILES TO VERIFY:\n- /work/package.json exists with correct dependencies\n- /work/tsconfig.json has valid TypeScript config\n- /work/README.md has setup instructions\n\nTESTS TO RUN:\n- npm install completes without errors\n- npm run build compiles TypeScript\n- Project structure follows conventions",
-  "status": "backlog",
+  "status": "ready",
   "priority": "high",
   "parent": "EPIC-001",
   "depends_on": [],
   "required_role": "qa",
   "claimed_by": null,
   "created_at": "2026-02-16T13:14:42.331Z",
-  "created_by": "lead-1"
+  "created_by": "lead-1",
+  "updated_at": "2026-02-16T13:20:22.195Z",
+  "comments": [
+    {
+      "from": "lead-1",
+      "text": "TODO-001 complete. Ready for QA verification of project setup.",
+      "at": "2026-02-16T13:20:22.195Z"
+    }
+  ]
 }
