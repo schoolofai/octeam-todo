@@ -3,12 +3,20 @@
   "type": "task",
   "title": "Add Express server configuration",
   "description": "FILES TO MODIFY:\n- /work/src/index.ts (Configure Express app, middleware, routes, port)\n\nFILES TO CREATE:\n- /work/src/config/index.ts (App configuration: port, environment)\n- /work/src/app.ts (Express app factory for testing)\n\nSetup CORS, JSON body parser, request logging, and graceful shutdown.",
-  "status": "backlog",
+  "status": "ready",
   "priority": "medium",
   "parent": "EPIC-001",
   "depends_on": [],
   "required_role": "developer",
   "claimed_by": null,
   "created_at": "2026-02-16T13:14:29.894Z",
-  "created_by": "lead-1"
+  "created_by": "lead-1",
+  "updated_at": "2026-02-16T13:23:21.864Z",
+  "comments": [
+    {
+      "from": "lead-1",
+      "text": "Ready - server config task",
+      "at": "2026-02-16T13:23:21.864Z"
+    }
+  ]
 }

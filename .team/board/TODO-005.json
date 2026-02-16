@@ -3,12 +3,20 @@
   "type": "task",
   "title": "Write unit tests for Todo storage",
   "description": "FILES TO CREATE:\n- /work/src/storage/__tests__/todoStore.test.ts (Unit tests for todoStore)\n- /work/jest.config.js (Jest configuration)\n\nTest coverage: create, read, update, delete operations, edge cases (not found, validation).",
-  "status": "backlog",
+  "status": "ready",
   "priority": "medium",
   "parent": "EPIC-001",
   "depends_on": [],
   "required_role": "developer",
   "claimed_by": null,
   "created_at": "2026-02-16T13:14:42.280Z",
-  "created_by": "lead-1"
+  "created_by": "lead-1",
+  "updated_at": "2026-02-16T13:23:21.892Z",
+  "comments": [
+    {
+      "from": "lead-1",
+      "text": "Ready - unit tests for storage",
+      "at": "2026-02-16T13:23:21.892Z"
+    }
+  ]
 }

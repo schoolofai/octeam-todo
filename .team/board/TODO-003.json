@@ -3,7 +3,7 @@
   "type": "task",
   "title": "Implement REST API routes for Todos",
   "description": "FILES TO CREATE:\n- /work/src/routes/todoRoutes.ts (Express router with CRUD endpoints)\n- /work/src/controllers/todoController.ts (Request handlers for GET/POST/PUT/DELETE)\n- /work/src/middleware/errorHandler.ts (Global error handling middleware)\n- /work/src/middleware/validation.ts (Request validation middleware)\n\nEndpoints: GET /todos, GET /todos/:id, POST /todos, PUT /todos/:id, DELETE /todos/:id",
-  "status": "review",
+  "status": "done",
   "priority": "high",
   "parent": "EPIC-001",
   "depends_on": [],
@@ -12,7 +12,7 @@
   "claimed_at": "2026-02-16T13:20:20.201Z",
   "created_at": "2026-02-16T13:14:29.870Z",
   "created_by": "lead-1",
-  "updated_at": "2026-02-16T13:21:44.012Z",
+  "updated_at": "2026-02-16T13:23:21.832Z",
   "comments": [
     {
       "from": "lead-1",
@@ -23,6 +23,11 @@
       "from": "developer-1",
       "text": "REST API routes implemented. Created routes/todoRoutes.ts, controllers/todoController.ts, middleware/errorHandler.ts, middleware/validation.ts. Full CRUD: GET/POST/PUT/DELETE. 12 new API tests, 26 total tests passing.",
       "at": "2026-02-16T13:21:44.012Z"
+    },
+    {
+      "from": "lead-1",
+      "text": "Approved. Complete REST API with routes, controllers, middleware, and tests.",
+      "at": "2026-02-16T13:23:21.833Z"
     }
   ]
 }
