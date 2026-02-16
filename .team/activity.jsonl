@@ -45,4 +45,6 @@
 {"id":"evt-1771248332136-opqt","timestamp":"2026-02-16T13:25:32.136Z","event_type":"task_claimed","agent_id":"developer-1","details":{"task_id":"TODO-005","title":"Write unit tests for Todo storage"}}
 {"id":"evt-1771248381847-8z5p","timestamp":"2026-02-16T13:26:21.847Z","event_type":"task_updated","agent_id":"developer-1","details":{"task_id":"TODO-005","old_status":"claimed","new_status":"review"}}
 {"id":"evt-TODO-005-review","timestamp":"2026-02-16T13:24:30.000Z","event_type":"task_updated","agent_id":"developer-1","details":{"task_id":"TODO-005","old_status":"claimed","new_status":"review"}}
-{"id":"evt-1771248445619-xayk","timestamp":"2026-02-16T13:27:25.619Z","event_type":"task_updated","agent_id":"qa-1","details":{"task_id":"TODO-005","old_status":"review","new_status":"done"}}
+{"id":"evt-1771248396218-8ikc","timestamp":"2026-02-16T13:26:36.218Z","event_type":"task_claimed","agent_id":"developer-1","details":{"task_id":"TODO-006","title":"Write integration tests for API endpoints"}}
+{"id":"evt-1771248454933-yigj","timestamp":"2026-02-16T13:27:34.933Z","event_type":"task_updated","agent_id":"developer-1","details":{"task_id":"TODO-006","old_status":"claimed","new_status":"review"}}
+{"id":"evt-TODO-006-review","timestamp":"2026-02-16T13:25:00.000Z","event_type":"task_updated","agent_id":"developer-1","details":{"task_id":"TODO-006","old_status":"claimed","new_status":"review"}}
