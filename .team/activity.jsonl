@@ -48,3 +48,6 @@
 {"id":"evt-1771248396218-8ikc","timestamp":"2026-02-16T13:26:36.218Z","event_type":"task_claimed","agent_id":"developer-1","details":{"task_id":"TODO-006","title":"Write integration tests for API endpoints"}}
 {"id":"evt-1771248454933-yigj","timestamp":"2026-02-16T13:27:34.933Z","event_type":"task_updated","agent_id":"developer-1","details":{"task_id":"TODO-006","old_status":"claimed","new_status":"review"}}
 {"id":"evt-TODO-006-review","timestamp":"2026-02-16T13:25:00.000Z","event_type":"task_updated","agent_id":"developer-1","details":{"task_id":"TODO-006","old_status":"claimed","new_status":"review"}}
+{"id":"evt-1771248471039-b5sq","timestamp":"2026-02-16T13:27:51.039Z","event_type":"task_updated","agent_id":"lead-1","details":{"task_id":"TODO-005","old_status":"review","new_status":"done"}}
+{"id":"evt-1771248471071-op2t","timestamp":"2026-02-16T13:27:51.071Z","event_type":"task_updated","agent_id":"lead-1","details":{"task_id":"TODO-009","old_status":"backlog","new_status":"ready"}}
+{"id":"evt-1771248471097-tuhi","timestamp":"2026-02-16T13:27:51.097Z","event_type":"message_sent","agent_id":"lead-1","details":{"from":"lead-1","to":"developer-1","body_preview":"TODO-005 approved! Great test coverage. Only TODO-006 (integration tests) left -"}}
