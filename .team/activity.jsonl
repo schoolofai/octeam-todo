@@ -56,3 +56,4 @@
 {"id":"evt-1771248523140-f99t","timestamp":"2026-02-16T13:28:43.140Z","event_type":"message_sent","agent_id":"lead-1","details":{"from":"lead-1","to":"developer-1","body_preview":"TODO-006 approved! All dev tasks complete. Great work delivering the full Todo A"}}
 {"id":"evt-1771248567091-hjfg","timestamp":"2026-02-16T13:29:27.091Z","event_type":"task_claimed","agent_id":"qa-1","details":{"task_id":"TODO-009","title":"QA: Verify unit and integration tests pass"}}
 {"id":"evt-1771248567116-tmhg","timestamp":"2026-02-16T13:29:27.116Z","event_type":"task_updated","agent_id":"qa-1","details":{"task_id":"TODO-009","old_status":"claimed","new_status":"done"}}
+{"id":"evt-1771248994229-24pq","timestamp":"2026-02-16T13:36:34.229Z","event_type":"agent_registered","agent_id":"developer-2","details":{"role":"developer","product":"octeam-todo"}}
