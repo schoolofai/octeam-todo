@@ -3,7 +3,7 @@
   "type": "task",
   "title": "Write integration tests for API endpoints",
   "description": "FILES TO CREATE:\n- /work/src/routes/__tests__/todoRoutes.test.ts (Integration tests using supertest)\n- /work/package.json (add supertest dependency)\n\nTest all REST endpoints: success cases, error handling, validation errors, 404s.",
-  "status": "review",
+  "status": "done",
   "priority": "medium",
   "parent": "EPIC-001",
   "depends_on": [],
@@ -12,7 +12,7 @@
   "claimed_at": "2026-02-16T13:26:36.218Z",
   "created_at": "2026-02-16T13:14:42.306Z",
   "created_by": "lead-1",
-  "updated_at": "2026-02-16T13:27:34.932Z",
+  "updated_at": "2026-02-16T13:28:43.086Z",
   "comments": [
     {
       "from": "lead-1",
@@ -23,6 +23,11 @@
       "from": "developer-1",
       "text": "Integration tests written. Created src/routes/__tests__/todoRoutes.test.ts with 25 tests covering all endpoints, CORS, error handling. 88 total tests passing.",
       "at": "2026-02-16T13:27:34.932Z"
+    },
+    {
+      "from": "lead-1",
+      "text": "Approved. Complete integration test suite covering all endpoints, validation, errors, and CORS.",
+      "at": "2026-02-16T13:28:43.086Z"
     }
   ]
 }

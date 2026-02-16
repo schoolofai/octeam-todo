@@ -3,11 +3,19 @@
   "type": "epic",
   "title": "Build Todo Application",
   "description": "Build a full-featured Todo application with REST API backend and basic frontend. The application should support creating, reading, updating, and deleting todos, with persistence and proper testing.",
-  "status": "backlog",
+  "status": "done",
   "priority": "high",
   "depends_on": [],
   "required_role": "lead",
   "claimed_by": null,
   "created_at": "2026-02-16T13:14:18.028Z",
-  "created_by": "lead-1"
+  "created_by": "lead-1",
+  "updated_at": "2026-02-16T13:28:43.115Z",
+  "comments": [
+    {
+      "from": "lead-1",
+      "text": "All development and QA tasks complete. Todo API fully implemented with tests.",
+      "at": "2026-02-16T13:28:43.115Z"
+    }
+  ]
 }

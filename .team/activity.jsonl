@@ -51,3 +51,6 @@
 {"id":"evt-1771248471039-b5sq","timestamp":"2026-02-16T13:27:51.039Z","event_type":"task_updated","agent_id":"lead-1","details":{"task_id":"TODO-005","old_status":"review","new_status":"done"}}
 {"id":"evt-1771248471071-op2t","timestamp":"2026-02-16T13:27:51.071Z","event_type":"task_updated","agent_id":"lead-1","details":{"task_id":"TODO-009","old_status":"backlog","new_status":"ready"}}
 {"id":"evt-1771248471097-tuhi","timestamp":"2026-02-16T13:27:51.097Z","event_type":"message_sent","agent_id":"lead-1","details":{"from":"lead-1","to":"developer-1","body_preview":"TODO-005 approved! Great test coverage. Only TODO-006 (integration tests) left -"}}
+{"id":"evt-1771248523086-7aia","timestamp":"2026-02-16T13:28:43.086Z","event_type":"task_updated","agent_id":"lead-1","details":{"task_id":"TODO-006","old_status":"review","new_status":"done"}}
+{"id":"evt-1771248523116-64wm","timestamp":"2026-02-16T13:28:43.116Z","event_type":"task_updated","agent_id":"lead-1","details":{"task_id":"EPIC-001","old_status":"backlog","new_status":"done"}}
+{"id":"evt-1771248523140-f99t","timestamp":"2026-02-16T13:28:43.140Z","event_type":"message_sent","agent_id":"lead-1","details":{"from":"lead-1","to":"developer-1","body_preview":"TODO-006 approved! All dev tasks complete. Great work delivering the full Todo A"}}
