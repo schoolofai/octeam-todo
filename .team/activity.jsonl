@@ -36,3 +36,7 @@
 {"id":"evt-1771248201918-9l3f","timestamp":"2026-02-16T13:23:21.918Z","event_type":"task_updated","agent_id":"lead-1","details":{"task_id":"TODO-006","old_status":"backlog","new_status":"ready"}}
 {"id":"evt-1771248201943-14sk","timestamp":"2026-02-16T13:23:21.943Z","event_type":"task_updated","agent_id":"lead-1","details":{"task_id":"TODO-008","old_status":"backlog","new_status":"ready"}}
 {"id":"evt-1771248208135-ilrl","timestamp":"2026-02-16T13:23:28.135Z","event_type":"message_sent","agent_id":"lead-1","details":{"from":"lead-1","to":"developer-1","body_preview":"TODO-003 approved! Excellent REST API implementation. TODO-004, TODO-005, TODO-0"}}
+{"id":"evt-1771248231197-ifit","timestamp":"2026-02-16T13:23:51.197Z","event_type":"task_claimed","agent_id":"qa-1","details":{"task_id":"TODO-007","title":"QA: Verify project setup and dependencies"}}
+{"id":"evt-1771248231227-99i9","timestamp":"2026-02-16T13:23:51.227Z","event_type":"task_claimed","agent_id":"qa-1","details":{"task_id":"TODO-008","title":"QA: Test all REST API endpoints"}}
+{"id":"evt-1771248236662-bw46","timestamp":"2026-02-16T13:23:56.662Z","event_type":"task_updated","agent_id":"qa-1","details":{"task_id":"TODO-007","old_status":"claimed","new_status":"done"}}
+{"id":"evt-1771248236692-3z9q","timestamp":"2026-02-16T13:23:56.692Z","event_type":"task_updated","agent_id":"qa-1","details":{"task_id":"TODO-008","old_status":"claimed","new_status":"done"}}
