@@ -18,3 +18,5 @@
 {"id":"evt-1771247812605-vl0d","timestamp":"2026-02-16T13:16:52.605Z","event_type":"task_updated","agent_id":"lead-1","details":{"task_id":"TODO-002","old_status":"backlog","new_status":"ready"}}
 {"id":"evt-1771247812632-egqw","timestamp":"2026-02-16T13:16:52.632Z","event_type":"task_updated","agent_id":"lead-1","details":{"task_id":"TODO-003","old_status":"backlog","new_status":"ready"}}
 {"id":"evt-1771247817373-i3g2","timestamp":"2026-02-16T13:16:57.373Z","event_type":"message_sent","agent_id":"lead-1","details":{"from":"lead-1","to":"developer-1","body_preview":"Done! TODO-001, TODO-002, and TODO-003 are now in ready status. Claim TODO-001 f"}}
+{"id":"evt-1771247853921-59ru","timestamp":"2026-02-16T13:17:33.921Z","event_type":"task_claimed","agent_id":"developer-1","details":{"task_id":"TODO-001","title":"Initialize Node.js project structure"}}
+{"id":"evt-1771247960632-wpy0","timestamp":"2026-02-16T13:19:20.632Z","event_type":"task_updated","agent_id":"developer-1","details":{"task_id":"TODO-001","old_status":"claimed","new_status":"review"}}
