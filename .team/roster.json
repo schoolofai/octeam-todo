@@ -8,6 +8,14 @@
       "current_task": null,
       "registered_at": "2026-02-16T13:12:06Z",
       "last_heartbeat": "2026-02-16T13:12:06Z"
+    },
+    {
+      "id": "developer-1",
+      "role": "developer",
+      "status": "active",
+      "current_task": null,
+      "registered_at": "2026-02-16T13:12:16Z",
+      "last_heartbeat": "2026-02-16T13:12:16Z"
     }
   ]
 }
