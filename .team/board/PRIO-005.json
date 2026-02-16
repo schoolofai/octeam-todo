@@ -3,19 +3,25 @@
   "type": "task",
   "title": "QA: Verify priority feature",
   "description": "Test priority field: creation with/without priority, updates, filtering, validation errors. Verify all 98+ tests pass.",
-  "status": "ready",
+  "status": "done",
   "priority": "high",
   "depends_on": [],
   "required_role": "qa",
-  "claimed_by": null,
+  "claimed_by": "qa-1",
+  "claimed_at": "2026-02-16T14:44:30.042Z",
   "created_at": "2026-02-16T14:40:25.156Z",
   "created_by": "developer-1",
-  "updated_at": "2026-02-16T14:42:45.675Z",
+  "updated_at": "2026-02-16T14:44:30.067Z",
   "comments": [
     {
       "from": "developer-1",
       "text": "Priority feature complete and ready for QA verification. 109 tests passing.",
       "at": "2026-02-16T14:42:45.675Z"
+    },
+    {
+      "from": "qa-1",
+      "text": "QA APPROVED: Priority feature verified. 21 tests, 109 total passing, TypeScript clean.",
+      "at": "2026-02-16T14:44:30.067Z"
     }
   ]
 }

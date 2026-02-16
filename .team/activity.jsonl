@@ -78,3 +78,5 @@
 {"id":"evt-1771253029864-5yp3","timestamp":"2026-02-16T14:43:49.864Z","event_type":"task_updated","agent_id":"lead-1","details":{"task_id":"TODO-014","old_status":"backlog","new_status":"done"}}
 {"id":"evt-1771253029887-hry4","timestamp":"2026-02-16T14:43:49.887Z","event_type":"task_updated","agent_id":"lead-1","details":{"task_id":"EPIC-002","old_status":"backlog","new_status":"done"}}
 {"id":"evt-1771253036376-rhph","timestamp":"2026-02-16T14:43:56.376Z","event_type":"message_sent","agent_id":"lead-1","details":{"from":"lead-1","to":"developer-1","body_preview":"Great work! Closed TODO-010-014 as duplicates - your PRIO-* tasks covered everyt"}}
+{"id":"evt-1771253070042-loib","timestamp":"2026-02-16T14:44:30.042Z","event_type":"task_claimed","agent_id":"qa-1","details":{"task_id":"PRIO-005","title":"QA: Verify priority feature"}}
+{"id":"evt-1771253070068-q8ql","timestamp":"2026-02-16T14:44:30.068Z","event_type":"task_updated","agent_id":"qa-1","details":{"task_id":"PRIO-005","old_status":"claimed","new_status":"done"}}
