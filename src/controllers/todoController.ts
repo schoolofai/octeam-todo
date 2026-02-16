@@ -1,13 +1,26 @@
 import { Request, Response } from 'express';
-import { todoStore } from '../storage/todoStore';
-import { NotFoundError } from '../middleware/errorHandler';
-import { ApiResponse, Todo, CreateTodoInput, UpdateTodoInput } from '../types';
+import { todoStore, TodoFilter } from '../storage/todoStore';
+import { NotFoundError, BadRequestError } from '../middleware/errorHandler';
+import { ApiResponse, Todo, CreateTodoInput, UpdateTodoInput, Priority } from '../types';
+import { isValidPriority } from '../models/todo';
 
 /**
- * GET /todos - Get all todos
+ * GET /todos - Get all todos, optionally filtered by priority
  */
 export function getAllTodos(req: Request, res: Response): void {
-  const todos = todoStore.getAll();
+  const filter: TodoFilter = {};
+  
+  // Handle priority query parameter
+  if (req.query.priority !== undefined) {
+    const priorityParam = req.query.priority;
+    if (typeof priorityParam === 'string' && isValidPriority(priorityParam)) {
+      filter.priority = priorityParam as Priority;
+    } else {
+      throw new BadRequestError(`Invalid priority filter: '${priorityParam}'. Must be 'high', 'medium', or 'low'`);
+    }
+  }
+  
+  const todos = todoStore.getAll(filter);
   const response: ApiResponse<Todo[]> = {
     success: true,
     data: todos
@@ -39,7 +52,8 @@ export function getTodoById(req: Request, res: Response): void {
 export function createTodo(req: Request, res: Response): void {
   const input: CreateTodoInput = {
     title: req.body.title,
-    description: req.body.description
+    description: req.body.description,
+    priority: req.body.priority
   };
   
   const todo = todoStore.create(input);
@@ -60,6 +74,7 @@ export function updateTodo(req: Request, res: Response): void {
   if (req.body.title !== undefined) input.title = req.body.title;
   if (req.body.description !== undefined) input.description = req.body.description;
   if (req.body.completed !== undefined) input.completed = req.body.completed;
+  if (req.body.priority !== undefined) input.priority = req.body.priority;
   
   const todo = todoStore.update(id, input);
   

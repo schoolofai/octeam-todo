@@ -1,6 +1,6 @@
 import { Request, Response, NextFunction } from 'express';
 import { BadRequestError } from './errorHandler';
-import { validateCreateInput, validateUpdateInput } from '../models/todo';
+import { validateCreateInput, validateUpdateInput, isValidPriority } from '../models/todo';
 
 /**
  * Validates request body for creating a todo
@@ -10,6 +10,11 @@ export function validateCreateTodo(
   res: Response,
   next: NextFunction
 ): void {
+  // Check priority first for specific error message
+  if (req.body.priority !== undefined && !isValidPriority(req.body.priority)) {
+    throw new BadRequestError(`Invalid priority: '${req.body.priority}'. Must be 'high', 'medium', or 'low'`);
+  }
+  
   if (!validateCreateInput(req.body)) {
     throw new BadRequestError('Invalid input: title is required and must be a non-empty string');
   }
@@ -24,8 +29,13 @@ export function validateUpdateTodo(
   res: Response,
   next: NextFunction
 ): void {
+  // Check priority first for specific error message
+  if (req.body.priority !== undefined && !isValidPriority(req.body.priority)) {
+    throw new BadRequestError(`Invalid priority: '${req.body.priority}'. Must be 'high', 'medium', or 'low'`);
+  }
+  
   if (!validateUpdateInput(req.body)) {
-    throw new BadRequestError('Invalid input: title must be string, description must be string, completed must be boolean');
+    throw new BadRequestError('Invalid input: title must be string, description must be string, completed must be boolean, priority must be high/medium/low');
   }
   next();
 }

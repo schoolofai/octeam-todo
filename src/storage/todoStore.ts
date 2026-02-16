@@ -1,5 +1,12 @@
-import { Todo, CreateTodoInput, UpdateTodoInput } from '../types';
+import { Todo, CreateTodoInput, UpdateTodoInput, Priority } from '../types';
 import { createTodo, updateTodo } from '../models/todo';
+
+/**
+ * Filter options for querying todos
+ */
+export interface TodoFilter {
+  priority?: Priority;
+}
 
 /**
  * In-memory storage for Todo items
@@ -8,10 +15,16 @@ export class TodoStore {
   private todos: Map<string, Todo> = new Map();
 
   /**
-   * Get all todos
+   * Get all todos, optionally filtered
    */
-  getAll(): Todo[] {
-    return Array.from(this.todos.values());
+  getAll(filter?: TodoFilter): Todo[] {
+    let todos = Array.from(this.todos.values());
+    
+    if (filter?.priority) {
+      todos = todos.filter(todo => todo.priority === filter.priority);
+    }
+    
+    return todos;
   }
 
   /**
