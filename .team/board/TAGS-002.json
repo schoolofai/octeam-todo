@@ -1,0 +1,14 @@
+{
+  "id": "TAGS-002",
+  "type": "task",
+  "title": "Update API for tags support",
+  "description": "FILES TO MODIFY:\n- /work/src/controllers/todoController.ts (Handle tags in create/update)\n- /work/src/middleware/validation.ts (Validate tags is array of strings)\n- /work/src/routes/todoRoutes.ts (Add GET /todos?tag=X filter endpoint)\n\nAccept tags in POST/PUT. Add query param filtering by tag.",
+  "status": "ready",
+  "priority": "high",
+  "parent": "EPIC-003",
+  "depends_on": [],
+  "required_role": "developer",
+  "claimed_by": null,
+  "created_at": "2026-02-16T15:15:19.897Z",
+  "created_by": "lead-1"
+}
