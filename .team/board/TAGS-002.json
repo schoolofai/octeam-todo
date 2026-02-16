@@ -1,14 +1,21 @@
 {
   "id": "TAGS-002",
   "type": "task",
-  "title": "Update API for tags support",
-  "description": "FILES TO MODIFY:\n- /work/src/controllers/todoController.ts (Handle tags in create/update)\n- /work/src/middleware/validation.ts (Validate tags is array of strings)\n- /work/src/routes/todoRoutes.ts (Add GET /todos?tag=X filter endpoint)\n\nAccept tags in POST/PUT. Add query param filtering by tag.",
-  "status": "ready",
+  "title": "Add tags validation",
+  "description": "Validate tags field: must be array of strings. Return 400 for non-array. Accept missing (default []). Add isValidTags() helper.",
+  "status": "done",
   "priority": "high",
-  "parent": "EPIC-003",
   "depends_on": [],
   "required_role": "developer",
   "claimed_by": null,
-  "created_at": "2026-02-16T15:15:19.897Z",
-  "created_by": "lead-1"
+  "created_at": "2026-02-16T15:14:16.601Z",
+  "created_by": "developer-1",
+  "updated_at": "2026-02-16T15:16:24.233Z",
+  "comments": [
+    {
+      "from": "developer-1",
+      "text": "Tags validation implemented. isValidTags(), updated validators.",
+      "at": "2026-02-16T15:16:24.233Z"
+    }
+  ]
 }

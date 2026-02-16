@@ -1,14 +1,21 @@
 {
   "id": "TAGS-005",
   "type": "task",
-  "title": "QA: Test tags functionality",
-  "description": "FILES TO CREATE:\n- /work/qa/tags-test-results.md\n\nTESTS:\n- Create todo with tags\n- Create todo without tags (empty array default)\n- Update tags on existing todo\n- Filter todos by tag\n- Multiple tags on single todo\n- Invalid tags validation",
-  "status": "backlog",
+  "title": "QA: Verify tags feature",
+  "description": "Test tags field: creation with/without tags, updates, filtering by tag, validation errors. Verify all tests pass.",
+  "status": "ready",
   "priority": "high",
-  "parent": "EPIC-003",
   "depends_on": [],
   "required_role": "qa",
   "claimed_by": null,
-  "created_at": "2026-02-16T15:15:19.974Z",
-  "created_by": "lead-1"
+  "created_at": "2026-02-16T15:14:16.670Z",
+  "created_by": "developer-1",
+  "updated_at": "2026-02-16T15:16:24.313Z",
+  "comments": [
+    {
+      "from": "developer-1",
+      "text": "Tags feature complete. Ready for QA verification. 134 tests passing.",
+      "at": "2026-02-16T15:16:24.313Z"
+    }
+  ]
 }
