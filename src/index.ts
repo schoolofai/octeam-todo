@@ -1,4 +1,6 @@
 import express, { Application } from 'express';
+import { todoRoutes } from './routes/todoRoutes';
+import { errorHandler } from './middleware/errorHandler';
 
 const app: Application = express();
 const PORT = process.env.PORT || 3000;
@@ -15,9 +17,18 @@ app.get('/health', (req, res) => {
 app.get('/', (req, res) => {
   res.json({ 
     message: 'Welcome to octeam-todo API',
-    version: '1.0.0'
+    version: '1.0.0',
+    endpoints: {
+      todos: '/todos'
+    }
   });
 });
+
+// API routes
+app.use('/todos', todoRoutes);
+
+// Error handling middleware (must be last)
+app.use(errorHandler);
 
 // Start server
 if (require.main === module) {
