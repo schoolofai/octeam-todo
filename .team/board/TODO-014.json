@@ -3,12 +3,20 @@
   "type": "task",
   "title": "QA: Test priority field functionality",
   "description": "FILES TO CREATE:\n- /work/qa/priority-test-results.md (Test execution report)\n\nTESTS TO PERFORM:\n- Create todo without priority (should default to medium)\n- Create todo with each priority level (low/medium/high/urgent)\n- Update todo priority\n- Verify priority persists correctly\n- Test invalid priority values return proper errors",
-  "status": "backlog",
+  "status": "done",
   "priority": "high",
   "parent": "EPIC-002",
   "depends_on": [],
   "required_role": "qa",
   "claimed_by": null,
   "created_at": "2026-02-16T14:41:04.261Z",
-  "created_by": "lead-1"
+  "created_by": "lead-1",
+  "updated_at": "2026-02-16T14:43:49.864Z",
+  "comments": [
+    {
+      "from": "lead-1",
+      "text": "Duplicate - covered by PRIO-005",
+      "at": "2026-02-16T14:43:49.864Z"
+    }
+  ]
 }

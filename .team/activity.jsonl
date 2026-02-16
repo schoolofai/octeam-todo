@@ -71,3 +71,10 @@
 {"id":"evt-1771252965676-gwzi","timestamp":"2026-02-16T14:42:45.676Z","event_type":"task_updated","agent_id":"developer-1","details":{"task_id":"PRIO-005","old_status":"backlog","new_status":"ready"}}
 {"id":"evt-1771252972646-7prk","timestamp":"2026-02-16T14:42:52.646Z","event_type":"message_sent","agent_id":"developer-1","details":{"from":"developer-1","to":"qa-1","body_preview":"Priority feature complete! PRIO-005 is ready for QA. Summary: Todo now has prior"}}
 {"id":"evt-1771253011079-7dr0","timestamp":"2026-02-16T14:43:31.079Z","event_type":"message_sent","agent_id":"developer-1","details":{"from":"developer-1","to":"lead-1","body_preview":"Hi lead! I already implemented the priority feature via PRIO-001 through PRIO-00"}}
+{"id":"evt-1771253029766-2mtu","timestamp":"2026-02-16T14:43:49.766Z","event_type":"task_updated","agent_id":"lead-1","details":{"task_id":"TODO-010","old_status":"ready","new_status":"done"}}
+{"id":"evt-1771253029794-epq9","timestamp":"2026-02-16T14:43:49.794Z","event_type":"task_updated","agent_id":"lead-1","details":{"task_id":"TODO-011","old_status":"ready","new_status":"done"}}
+{"id":"evt-1771253029817-ltby","timestamp":"2026-02-16T14:43:49.817Z","event_type":"task_updated","agent_id":"lead-1","details":{"task_id":"TODO-012","old_status":"ready","new_status":"done"}}
+{"id":"evt-1771253029841-febb","timestamp":"2026-02-16T14:43:49.841Z","event_type":"task_updated","agent_id":"lead-1","details":{"task_id":"TODO-013","old_status":"ready","new_status":"done"}}
+{"id":"evt-1771253029864-5yp3","timestamp":"2026-02-16T14:43:49.864Z","event_type":"task_updated","agent_id":"lead-1","details":{"task_id":"TODO-014","old_status":"backlog","new_status":"done"}}
+{"id":"evt-1771253029887-hry4","timestamp":"2026-02-16T14:43:49.887Z","event_type":"task_updated","agent_id":"lead-1","details":{"task_id":"EPIC-002","old_status":"backlog","new_status":"done"}}
+{"id":"evt-1771253036376-rhph","timestamp":"2026-02-16T14:43:56.376Z","event_type":"message_sent","agent_id":"lead-1","details":{"from":"lead-1","to":"developer-1","body_preview":"Great work! Closed TODO-010-014 as duplicates - your PRIO-* tasks covered everyt"}}

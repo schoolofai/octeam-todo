@@ -3,12 +3,20 @@
   "type": "task",
   "title": "Add unit tests for priority field",
   "description": "FILES TO MODIFY:\n- /work/src/storage/__tests__/todoStore.test.ts (Add tests for priority in CRUD operations)\n\nFILES TO CREATE:\n- /work/src/models/__tests__/todo.test.ts (Test priority validation)\n\nTest: default priority, create with priority, update priority, invalid priority values.",
-  "status": "ready",
+  "status": "done",
   "priority": "medium",
   "parent": "EPIC-002",
   "depends_on": [],
   "required_role": "developer",
   "claimed_by": null,
   "created_at": "2026-02-16T14:41:04.214Z",
-  "created_by": "lead-1"
+  "created_by": "lead-1",
+  "updated_at": "2026-02-16T14:43:49.817Z",
+  "comments": [
+    {
+      "from": "lead-1",
+      "text": "Duplicate - covered by PRIO-004",
+      "at": "2026-02-16T14:43:49.817Z"
+    }
+  ]
 }
