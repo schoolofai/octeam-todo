@@ -3,7 +3,7 @@
   "type": "task",
   "title": "Add Express server configuration",
   "description": "FILES TO MODIFY:\n- /work/src/index.ts (Configure Express app, middleware, routes, port)\n\nFILES TO CREATE:\n- /work/src/config/index.ts (App configuration: port, environment)\n- /work/src/app.ts (Express app factory for testing)\n\nSetup CORS, JSON body parser, request logging, and graceful shutdown.",
-  "status": "review",
+  "status": "done",
   "priority": "medium",
   "parent": "EPIC-001",
   "depends_on": [],
@@ -12,7 +12,7 @@
   "claimed_at": "2026-02-16T13:24:30.335Z",
   "created_at": "2026-02-16T13:14:29.894Z",
   "created_by": "lead-1",
-  "updated_at": "2026-02-16T13:25:20.606Z",
+  "updated_at": "2026-02-16T13:26:19.222Z",
   "comments": [
     {
       "from": "lead-1",
@@ -23,6 +23,11 @@
       "from": "developer-1",
       "text": "Server config implemented. Added config/index.ts, app.ts factory, CORS, request logging, graceful shutdown. 31 tests passing.",
       "at": "2026-02-16T13:25:20.606Z"
+    },
+    {
+      "from": "lead-1",
+      "text": "Approved. Clean app factory pattern with config, CORS, and request logging.",
+      "at": "2026-02-16T13:26:19.222Z"
     }
   ]
 }
