@@ -16,6 +16,14 @@
       "current_task": null,
       "registered_at": "2026-02-16T13:12:16Z",
       "last_heartbeat": "2026-02-16T13:12:16Z"
+    },
+    {
+      "id": "lead-1",
+      "role": "lead",
+      "status": "active",
+      "current_task": null,
+      "registered_at": "2026-02-16T13:12:21Z",
+      "last_heartbeat": "2026-02-16T13:12:21Z"
     }
   ]
 }
