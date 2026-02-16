@@ -1,0 +1,22 @@
+{
+  "id": "PRIO-001",
+  "type": "task",
+  "title": "Add priority field to Todo data model",
+  "description": "Add priority field (high|medium|low) to Todo interface and storage. Default to 'medium'. Update CreateTodoInput and UpdateTodoInput types.",
+  "status": "done",
+  "priority": "high",
+  "depends_on": [],
+  "required_role": "developer",
+  "claimed_by": "developer-1",
+  "claimed_at": "2026-02-16T14:40:34.827Z",
+  "created_at": "2026-02-16T14:40:25.062Z",
+  "created_by": "developer-1",
+  "updated_at": "2026-02-16T14:42:45.575Z",
+  "comments": [
+    {
+      "from": "developer-1",
+      "text": "Priority field added to data model. Types, interfaces, and defaults implemented.",
+      "at": "2026-02-16T14:42:45.575Z"
+    }
+  ]
+}

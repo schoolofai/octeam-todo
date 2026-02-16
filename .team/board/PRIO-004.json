@@ -1,0 +1,21 @@
+{
+  "id": "PRIO-004",
+  "type": "task",
+  "title": "Add priority tests (10+ new tests)",
+  "description": "Add minimum 10 new tests: unit tests for model/validation, integration tests for API, filter tests for GET /todos?priority=X. Must not break existing 88 tests.",
+  "status": "done",
+  "priority": "high",
+  "depends_on": [],
+  "required_role": "developer",
+  "claimed_by": null,
+  "created_at": "2026-02-16T14:40:25.135Z",
+  "created_by": "developer-1",
+  "updated_at": "2026-02-16T14:42:45.653Z",
+  "comments": [
+    {
+      "from": "developer-1",
+      "text": "21 new tests added in test/priority.test.ts. All 109 tests passing (88 original + 21 new).",
+      "at": "2026-02-16T14:42:45.653Z"
+    }
+  ]
+}
