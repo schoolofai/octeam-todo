@@ -1,0 +1,14 @@
+{
+  "id": "TODO-001",
+  "type": "task",
+  "title": "Initialize Node.js project structure",
+  "description": "FILES TO CREATE:\n- /work/package.json (Node.js project config with express, jest dependencies)\n- /work/tsconfig.json (TypeScript configuration)\n- /work/src/index.ts (Application entry point)\n- /work/.gitignore (Node.js gitignore)\n- /work/README.md (Project documentation)\n\nInitialize the project with: npm init, install express, typescript, ts-node, jest, @types/*",
+  "status": "backlog",
+  "priority": "high",
+  "parent": "EPIC-001",
+  "depends_on": [],
+  "required_role": "developer",
+  "claimed_by": null,
+  "created_at": "2026-02-16T13:14:29.821Z",
+  "created_by": "lead-1"
+}

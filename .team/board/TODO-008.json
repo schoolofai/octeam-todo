@@ -1,0 +1,14 @@
+{
+  "id": "TODO-008",
+  "type": "task",
+  "title": "QA: Test all REST API endpoints",
+  "description": "FILES TO CREATE:\n- /work/qa/api-test-results.md (Test execution report)\n\nMANUAL TESTS TO PERFORM:\n- Start server (npm start)\n- Test POST /todos - create todo\n- Test GET /todos - list all todos  \n- Test GET /todos/:id - get single todo\n- Test PUT /todos/:id - update todo\n- Test DELETE /todos/:id - delete todo\n- Test error cases: invalid ID, missing fields, not found",
+  "status": "backlog",
+  "priority": "high",
+  "parent": "EPIC-001",
+  "depends_on": [],
+  "required_role": "qa",
+  "claimed_by": null,
+  "created_at": "2026-02-16T13:14:42.355Z",
+  "created_by": "lead-1"
+}
