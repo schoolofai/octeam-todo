@@ -1,0 +1,14 @@
+{
+  "id": "TODO-011",
+  "type": "task",
+  "title": "Update API to handle priority field",
+  "description": "FILES TO MODIFY:\n- /work/src/controllers/todoController.ts (Handle priority in create/update)\n- /work/src/middleware/validation.ts (Validate priority values)\n- /work/src/routes/todoRoutes.ts (No changes needed if validation middleware updated)\n\nAccept priority in POST/PUT requests. Validate against allowed values.",
+  "status": "ready",
+  "priority": "high",
+  "parent": "EPIC-002",
+  "depends_on": [],
+  "required_role": "developer",
+  "claimed_by": null,
+  "created_at": "2026-02-16T14:41:04.189Z",
+  "created_by": "lead-1"
+}

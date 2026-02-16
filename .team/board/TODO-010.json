@@ -1,0 +1,14 @@
+{
+  "id": "TODO-010",
+  "type": "task",
+  "title": "Add priority field to Todo model",
+  "description": "FILES TO MODIFY:\n- /work/src/types/index.ts (Add Priority enum: low|medium|high|urgent, add priority field to Todo interface, update CreateTodoInput and UpdateTodoInput)\n- /work/src/models/todo.ts (Update createTodo to set default priority, update validation functions)\n\nDefault priority: medium. Priority is optional on create, defaults to medium.",
+  "status": "ready",
+  "priority": "high",
+  "parent": "EPIC-002",
+  "depends_on": [],
+  "required_role": "developer",
+  "claimed_by": null,
+  "created_at": "2026-02-16T14:41:04.160Z",
+  "created_by": "lead-1"
+}

@@ -1,0 +1,13 @@
+{
+  "id": "EPIC-002",
+  "type": "epic",
+  "title": "Add Priority Field to Todos",
+  "description": "Add a priority field to todo items. Priority levels: low, medium, high, urgent. Allows users to prioritize and sort their tasks.",
+  "status": "backlog",
+  "priority": "high",
+  "depends_on": [],
+  "required_role": "lead",
+  "claimed_by": null,
+  "created_at": "2026-02-16T14:40:50.234Z",
+  "created_by": "lead-1"
+}

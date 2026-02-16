@@ -1,0 +1,14 @@
+{
+  "id": "TODO-013",
+  "type": "task",
+  "title": "Add integration tests for priority API",
+  "description": "FILES TO MODIFY:\n- /work/src/routes/__tests__/todoRoutes.test.ts (Add priority tests)\n- /work/test/api.test.ts (Add priority tests)\n\nTest: POST with priority, PUT to update priority, GET returns priority, invalid priority returns 400.",
+  "status": "ready",
+  "priority": "medium",
+  "parent": "EPIC-002",
+  "depends_on": [],
+  "required_role": "developer",
+  "claimed_by": null,
+  "created_at": "2026-02-16T14:41:04.237Z",
+  "created_by": "lead-1"
+}
