@@ -74,3 +74,5 @@
 {"id":"evt-1771254990643-kjn1","timestamp":"2026-02-16T15:16:30.643Z","event_type":"message_sent","agent_id":"developer-1","details":{"from":"developer-1","to":"qa-1","body_preview":"Tags feature complete! TAGS-005 is ready for QA. Summary: Todo now has tags fiel"}}
 {"id":"evt-1771255018882-30y3","timestamp":"2026-02-16T15:16:58.882Z","event_type":"task_updated","agent_id":"lead-1","details":{"task_id":"EPIC-003","old_status":"backlog","new_status":"done"}}
 {"id":"evt-1771255018906-81i3","timestamp":"2026-02-16T15:16:58.906Z","event_type":"message_sent","agent_id":"lead-1","details":{"from":"lead-1","to":"developer-1","body_preview":"EPIC-003 tags feature done! Great work on the fast turnaround. TAGS-005 is with "}}
+{"id":"evt-1771255060213-lxk8","timestamp":"2026-02-16T15:17:40.213Z","event_type":"task_claimed","agent_id":"qa-1","details":{"task_id":"TAGS-005","title":"QA: Verify tags feature"}}
+{"id":"evt-1771255060240-yjxm","timestamp":"2026-02-16T15:17:40.240Z","event_type":"task_updated","agent_id":"qa-1","details":{"task_id":"TAGS-005","old_status":"claimed","new_status":"done"}}
