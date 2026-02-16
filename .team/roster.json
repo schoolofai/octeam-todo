@@ -1,4 +1,13 @@
 {
   "product": "octeam-todo",
-  "agents": []
+  "agents": [
+    {
+      "id": "qa-1",
+      "role": "qa",
+      "status": "active",
+      "current_task": null,
+      "registered_at": "2026-02-16T13:12:06Z",
+      "last_heartbeat": "2026-02-16T13:12:06Z"
+    }
+  ]
 }
