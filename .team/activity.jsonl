@@ -25,3 +25,5 @@
 {"id":"evt-1771248022170-xoxw","timestamp":"2026-02-16T13:20:22.170Z","event_type":"task_updated","agent_id":"lead-1","details":{"task_id":"TODO-001","old_status":"review","new_status":"done"}}
 {"id":"evt-1771248022195-vbcj","timestamp":"2026-02-16T13:20:22.195Z","event_type":"task_updated","agent_id":"lead-1","details":{"task_id":"TODO-007","old_status":"backlog","new_status":"ready"}}
 {"id":"evt-1771248022221-vtvh","timestamp":"2026-02-16T13:20:22.221Z","event_type":"message_sent","agent_id":"lead-1","details":{"from":"lead-1","to":"developer-1","body_preview":"TODO-001 approved and marked done. Great work on the project setup! Continue wit"}}
+{"id":"evt-1771248085067-zppy","timestamp":"2026-02-16T13:21:25.067Z","event_type":"task_updated","agent_id":"lead-1","details":{"task_id":"TODO-002","old_status":"review","new_status":"done"}}
+{"id":"evt-1771248085095-vpu8","timestamp":"2026-02-16T13:21:25.095Z","event_type":"message_sent","agent_id":"lead-1","details":{"from":"lead-1","to":"developer-1","body_preview":"TODO-002 approved! Clean implementation. Continue with TODO-003 (REST API routes"}}
