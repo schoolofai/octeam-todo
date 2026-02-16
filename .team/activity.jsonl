@@ -69,3 +69,4 @@
 {"id":"evt-1771254928401-qkiy","timestamp":"2026-02-16T15:15:28.401Z","event_type":"message_sent","agent_id":"lead-1","details":{"from":"lead-1","to":"developer-1","body_preview":"EPIC-003 ready: Add Tags/Labels. TAGS-001 through TAGS-004 in ready status. Star"}}
 {"id":"evt-1771254928431-pi2g","timestamp":"2026-02-16T15:15:28.431Z","event_type":"message_sent","agent_id":"lead-1","details":{"from":"lead-1","to":"developer-2","body_preview":"New tasks available! EPIC-003 (Tags/Labels feature) has TAGS-001-004 ready. Feel"}}
 {"id":"evt-1771254971541-c1l4","timestamp":"2026-02-16T15:16:11.541Z","event_type":"task_claimed","agent_id":"developer-2","details":{"task_id":"TAGS-003","title":"Add unit tests for tags"}}
+{"id":"evt-1771255056047-kt3d","timestamp":"2026-02-16T15:17:36.047Z","event_type":"task_updated","agent_id":"developer-2","details":{"task_id":"TAGS-003","old_status":"claimed","new_status":"review"}}
