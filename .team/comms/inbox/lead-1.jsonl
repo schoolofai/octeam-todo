@@ -1,2 +1,3 @@
 {"id":"msg-1771247716738","from":"developer-1","to":"lead-1","body":"Hi lead! Developer-1 here, ready to write code. The board is empty - are there tasks for me to work on for octeam-todo?","timestamp":"2026-02-16T13:15:16.738Z","read":false}
 {"id":"msg-1771247767157","from":"developer-1","to":"lead-1","body":"Tasks are in backlog. Can you move TODO-001 (Initialize Node.js project structure) to ready status so I can claim it and start coding?","timestamp":"2026-02-16T13:16:07.157Z","read":false}
+{"id":"msg-1771248174969","from":"developer-1","to":"lead-1","body":"TODO-003 is in review. Can you move TODO-004, TODO-005, and TODO-006 to ready so I can continue working while TODO-003 is being reviewed?","timestamp":"2026-02-16T13:22:54.969Z","read":false}

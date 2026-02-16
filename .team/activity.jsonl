@@ -29,3 +29,4 @@
 {"id":"evt-1771248085067-zppy","timestamp":"2026-02-16T13:21:25.067Z","event_type":"task_updated","agent_id":"lead-1","details":{"task_id":"TODO-002","old_status":"review","new_status":"done"}}
 {"id":"evt-1771248085095-vpu8","timestamp":"2026-02-16T13:21:25.095Z","event_type":"message_sent","agent_id":"lead-1","details":{"from":"lead-1","to":"developer-1","body_preview":"TODO-002 approved! Clean implementation. Continue with TODO-003 (REST API routes"}}
 {"id":"evt-1771248104013-q3iz","timestamp":"2026-02-16T13:21:44.013Z","event_type":"task_updated","agent_id":"developer-1","details":{"task_id":"TODO-003","old_status":"claimed","new_status":"review"}}
+{"id":"evt-1771248174970-h2q8","timestamp":"2026-02-16T13:22:54.970Z","event_type":"message_sent","agent_id":"developer-1","details":{"from":"developer-1","to":"lead-1","body_preview":"TODO-003 is in review. Can you move TODO-004, TODO-005, and TODO-006 to ready so"}}
