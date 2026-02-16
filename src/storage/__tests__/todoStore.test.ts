@@ -41,6 +41,29 @@ describe('TodoStore', () => {
       const todo = store.create({ title: 'Test' });
       expect(todo.completed).toBe(false);
     });
+
+    it('should set tags to empty array by default', () => {
+      const todo = store.create({ title: 'Test' });
+      expect(todo.tags).toEqual([]);
+    });
+
+    it('should create todo with specified tags', () => {
+      const todo = store.create({ title: 'Test', tags: ['work', 'urgent'] });
+      expect(todo.tags).toEqual(['work', 'urgent']);
+    });
+
+    it('should create todo with single tag', () => {
+      const todo = store.create({ title: 'Test', tags: ['personal'] });
+      expect(todo.tags).toEqual(['personal']);
+    });
+
+    it('should create multiple todos with different tags', () => {
+      const todo1 = store.create({ title: 'Work task', tags: ['work'] });
+      const todo2 = store.create({ title: 'Home task', tags: ['personal', 'home'] });
+      
+      expect(todo1.tags).toEqual(['work']);
+      expect(todo2.tags).toEqual(['personal', 'home']);
+    });
   });
 
   describe('getAll', () => {
@@ -55,6 +78,43 @@ describe('TodoStore', () => {
       
       const todos = store.getAll();
       expect(todos.length).toBe(3);
+    });
+
+    it('should filter todos by tag', () => {
+      store.create({ title: 'Work 1', tags: ['work'] });
+      store.create({ title: 'Personal 1', tags: ['personal'] });
+      store.create({ title: 'Work 2', tags: ['work', 'urgent'] });
+      store.create({ title: 'No tags' });
+      
+      const workTodos = store.getAll({ tag: 'work' });
+      expect(workTodos.length).toBe(2);
+      expect(workTodos.every(t => t.tags.includes('work'))).toBe(true);
+    });
+
+    it('should return empty array when no todos match tag filter', () => {
+      store.create({ title: 'Work', tags: ['work'] });
+      store.create({ title: 'Personal', tags: ['personal'] });
+      
+      const filtered = store.getAll({ tag: 'nonexistent' });
+      expect(filtered).toEqual([]);
+    });
+
+    it('should return all todos when no filter provided', () => {
+      store.create({ title: 'Work', tags: ['work'] });
+      store.create({ title: 'Personal', tags: ['personal'] });
+      store.create({ title: 'No tags' });
+      
+      const all = store.getAll();
+      expect(all.length).toBe(3);
+    });
+
+    it('should filter by tag and return todos with multiple tags', () => {
+      store.create({ title: 'Multi-tag', tags: ['work', 'urgent', 'important'] });
+      store.create({ title: 'Single tag', tags: ['personal'] });
+      
+      const urgentTodos = store.getAll({ tag: 'urgent' });
+      expect(urgentTodos.length).toBe(1);
+      expect(urgentTodos[0].title).toBe('Multi-tag');
     });
   });
 
@@ -119,6 +179,42 @@ describe('TodoStore', () => {
       const updated = store.update(created.id, { title: 'Updated' });
       
       expect(updated?.updatedAt.getTime()).toBeGreaterThanOrEqual(originalUpdatedAt.getTime());
+    });
+
+    it('should update todo tags', () => {
+      const created = store.create({ title: 'Test', tags: ['work'] });
+      const updated = store.update(created.id, { tags: ['work', 'urgent'] });
+      
+      expect(updated?.tags).toEqual(['work', 'urgent']);
+    });
+
+    it('should not change tags when not in update input', () => {
+      const created = store.create({ title: 'Test', tags: ['personal'] });
+      const updated = store.update(created.id, { title: 'New Title' });
+      
+      expect(updated?.tags).toEqual(['personal']);
+    });
+
+    it('should allow clearing tags with empty array', () => {
+      const created = store.create({ title: 'Test', tags: ['work', 'urgent'] });
+      const updated = store.update(created.id, { tags: [] });
+      
+      expect(updated?.tags).toEqual([]);
+    });
+
+    it('should allow replacing all tags', () => {
+      const created = store.create({ title: 'Test', tags: ['work', 'urgent'] });
+      const updated = store.update(created.id, { tags: ['personal', 'home'] });
+      
+      expect(updated?.tags).toEqual(['personal', 'home']);
+    });
+
+    it('should add tags to todo with empty tags', () => {
+      const created = store.create({ title: 'Test' }); // defaults to empty tags
+      expect(created.tags).toEqual([]);
+      
+      const updated = store.update(created.id, { tags: ['new-tag'] });
+      expect(updated?.tags).toEqual(['new-tag']);
     });
   });
 
@@ -231,6 +327,46 @@ describe('Validation', () => {
     it('should reject non-object input', () => {
       expect(validateUpdateInput(null)).toBe(false);
       expect(validateUpdateInput(undefined)).toBe(false);
+    });
+
+    it('should accept valid tags array in update', () => {
+      expect(validateUpdateInput({ tags: [] })).toBe(true);
+      expect(validateUpdateInput({ tags: ['work'] })).toBe(true);
+      expect(validateUpdateInput({ tags: ['work', 'personal'] })).toBe(true);
+    });
+
+    it('should reject non-array tags in update', () => {
+      expect(validateUpdateInput({ tags: 'work' })).toBe(false);
+      expect(validateUpdateInput({ tags: 123 })).toBe(false);
+      expect(validateUpdateInput({ tags: { tag: 'work' } })).toBe(false);
+    });
+
+    it('should reject tags array with non-string elements', () => {
+      expect(validateUpdateInput({ tags: [123] })).toBe(false);
+      expect(validateUpdateInput({ tags: ['work', 123] })).toBe(false);
+      expect(validateUpdateInput({ tags: [null] })).toBe(false);
+    });
+  });
+
+  describe('validateCreateInput with tags', () => {
+    it('should accept valid tags array in create', () => {
+      expect(validateCreateInput({ title: 'Test', tags: [] })).toBe(true);
+      expect(validateCreateInput({ title: 'Test', tags: ['work'] })).toBe(true);
+      expect(validateCreateInput({ title: 'Test', tags: ['work', 'personal'] })).toBe(true);
+    });
+
+    it('should accept create without tags', () => {
+      expect(validateCreateInput({ title: 'Test' })).toBe(true);
+    });
+
+    it('should reject non-array tags in create', () => {
+      expect(validateCreateInput({ title: 'Test', tags: 'work' })).toBe(false);
+      expect(validateCreateInput({ title: 'Test', tags: 123 })).toBe(false);
+    });
+
+    it('should reject tags array with non-string elements in create', () => {
+      expect(validateCreateInput({ title: 'Test', tags: [123] })).toBe(false);
+      expect(validateCreateInput({ title: 'Test', tags: ['work', null] })).toBe(false);
     });
   });
 });
