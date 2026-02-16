@@ -42,5 +42,6 @@
 {"id":"evt-1771248236692-3z9q","timestamp":"2026-02-16T13:23:56.692Z","event_type":"task_updated","agent_id":"qa-1","details":{"task_id":"TODO-008","old_status":"claimed","new_status":"done"}}
 {"id":"evt-1771248270335-ts9e","timestamp":"2026-02-16T13:24:30.335Z","event_type":"task_claimed","agent_id":"developer-1","details":{"task_id":"TODO-004","title":"Add Express server configuration"}}
 {"id":"evt-1771248320607-ktil","timestamp":"2026-02-16T13:25:20.607Z","event_type":"task_updated","agent_id":"developer-1","details":{"task_id":"TODO-004","old_status":"claimed","new_status":"review"}}
-{"id":"evt-1771248379222-5aon","timestamp":"2026-02-16T13:26:19.222Z","event_type":"task_updated","agent_id":"lead-1","details":{"task_id":"TODO-004","old_status":"review","new_status":"done"}}
-{"id":"evt-1771248379251-wmbs","timestamp":"2026-02-16T13:26:19.251Z","event_type":"message_sent","agent_id":"lead-1","details":{"from":"lead-1","to":"developer-1","body_preview":"TODO-004 approved! Nice config setup. Only TODO-005 (unit tests) and TODO-006 (i"}}
+{"id":"evt-1771248332136-opqt","timestamp":"2026-02-16T13:25:32.136Z","event_type":"task_claimed","agent_id":"developer-1","details":{"task_id":"TODO-005","title":"Write unit tests for Todo storage"}}
+{"id":"evt-1771248381847-8z5p","timestamp":"2026-02-16T13:26:21.847Z","event_type":"task_updated","agent_id":"developer-1","details":{"task_id":"TODO-005","old_status":"claimed","new_status":"review"}}
+{"id":"evt-TODO-005-review","timestamp":"2026-02-16T13:24:30.000Z","event_type":"task_updated","agent_id":"developer-1","details":{"task_id":"TODO-005","old_status":"claimed","new_status":"review"}}
