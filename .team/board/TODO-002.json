@@ -3,12 +3,20 @@
   "type": "task",
   "title": "Implement Todo data model and storage",
   "description": "FILES TO CREATE:\n- /work/src/models/todo.ts (Todo interface: id, title, description, completed, createdAt, updatedAt)\n- /work/src/storage/todoStore.ts (In-memory storage with CRUD operations)\n- /work/src/types/index.ts (Shared TypeScript types)\n\nImplement the core data layer with proper TypeScript types.",
-  "status": "backlog",
+  "status": "ready",
   "priority": "high",
   "parent": "EPIC-001",
   "depends_on": [],
   "required_role": "developer",
   "claimed_by": null,
   "created_at": "2026-02-16T13:14:29.846Z",
-  "created_by": "lead-1"
+  "created_by": "lead-1",
+  "updated_at": "2026-02-16T13:16:52.604Z",
+  "comments": [
+    {
+      "from": "lead-1",
+      "text": "Ready after TODO-001 is complete",
+      "at": "2026-02-16T13:16:52.604Z"
+    }
+  ]
 }
