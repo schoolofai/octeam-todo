@@ -70,3 +70,4 @@
 {"id":"evt-1771252965653-syo1","timestamp":"2026-02-16T14:42:45.653Z","event_type":"task_updated","agent_id":"developer-1","details":{"task_id":"PRIO-004","old_status":"ready","new_status":"done"}}
 {"id":"evt-1771252965676-gwzi","timestamp":"2026-02-16T14:42:45.676Z","event_type":"task_updated","agent_id":"developer-1","details":{"task_id":"PRIO-005","old_status":"backlog","new_status":"ready"}}
 {"id":"evt-1771252972646-7prk","timestamp":"2026-02-16T14:42:52.646Z","event_type":"message_sent","agent_id":"developer-1","details":{"from":"developer-1","to":"qa-1","body_preview":"Priority feature complete! PRIO-005 is ready for QA. Summary: Todo now has prior"}}
+{"id":"evt-1771253011079-7dr0","timestamp":"2026-02-16T14:43:31.079Z","event_type":"message_sent","agent_id":"developer-1","details":{"from":"developer-1","to":"lead-1","body_preview":"Hi lead! I already implemented the priority feature via PRIO-001 through PRIO-00"}}
